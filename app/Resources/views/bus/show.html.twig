@@ -1,0 +1,42 @@
+{% extends 'backend/index.html.twig' %}
+
+{% block content %}
+<div class="box-body">
+    <table id="example2" class="table table-bordered table-hover">
+        <thead>
+        <tr>
+            <th>Reference Bus</th>
+
+            <th>Nombre des places </th>
+
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>{{ bus.id }}</td>
+
+            <td>{{ bus.nbrPlace }}</td>
+
+        </tr>
+    <h1 style="text-align: center">Details Bus</h1>
+
+        </tbody>
+    </table>
+</div>
+
+
+
+            <a type="button" class="btn btn-default pull-right" href="{{ path('bus_index') }}">Back to the list</a>
+<div>
+
+            <a type="button" class="btn btn-default pull-right" href="{{ path('bus_edit', { 'id': bus.id }) }}">edit</a>
+
+</div>
+            {{ form_start(delete_form) }}
+                <input style="color: red" type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+
+
+
+
+{% endblock %}

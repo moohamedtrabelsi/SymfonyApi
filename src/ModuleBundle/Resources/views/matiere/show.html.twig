@@ -1,0 +1,48 @@
+{% extends 'backend/indexe.html.twig' %}
+{% block content %}
+    <div class="box">
+        <div class="box-header">
+            <h3 class="box-title">Liste des matières</h3>
+        </div>
+        <!-- /.box-header -->
+        <div class="box-body">
+            <table id="example1" class="table table-bordered table-striped">
+                <thead>
+                <tr>
+                    <th>ID matière</th>
+                    <th>Nom de matière</th>
+                    <th>Coefficient</th>
+                    <th>Description</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>{{ matiere.id }}</td>
+                    <td>{{ matiere.nom }}</td>
+                    <td>{{ matiere.coefficient }}</td>
+                    <td>{{ matiere.description }}</td>
+                </tr>
+                <ul>
+
+                        {{ form_start(delete_form) }}
+                        <input type="submit" value="Delete" onclick="return confirm('Voulez vous vraiment supprimer cette matière?')">
+                        {{ form_end(delete_form) }}
+                </ul>
+                </tbody>
+            </table>
+            <li>
+                <a href="{{ path('matiere_index') }}">Back to the list</a>
+            </li>
+        </div>
+        <!-- /.box-body -->
+    </div>
+    <!-- /.box -->
+    </div>
+    <!-- /.col -->
+    </div>
+    <!-- /.row -->
+    </section>
+    <!-- /.content -->
+    </div>
+
+{% endblock %}

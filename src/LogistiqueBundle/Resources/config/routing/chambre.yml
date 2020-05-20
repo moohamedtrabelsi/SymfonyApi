@@ -1,0 +1,24 @@
+chambre_index:
+  path:     /
+  defaults: { _controller: "LogistiqueBundle:chambre:index" }
+  methods:  GET
+
+chambre_show:
+  path:     /{id}/show
+  defaults: { _controller: "LogistiqueBundle:chambre:show" }
+  methods:  GET
+
+chambre_new:
+  path:     /new
+  defaults: { _controller: "LogistiqueBundle:chambre:new" }
+  methods:  [GET, POST]
+
+chambre_edit:
+  path:     /{id}/edit
+  defaults: { _controller: "LogistiqueBundle:chambre:edit" }
+  methods:  [GET, POST]
+
+chambre_delete:
+  path:     /{id}/delete
+  defaults: { _controller: "LogistiqueBundle:chambre:delete" }
+  methods:  DELETE

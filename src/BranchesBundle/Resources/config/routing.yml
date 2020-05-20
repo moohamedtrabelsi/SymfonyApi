@@ -1,0 +1,3 @@
+branches_homepage:
+    path:     /
+    defaults: { _controller: BranchesBundle:Default:index }

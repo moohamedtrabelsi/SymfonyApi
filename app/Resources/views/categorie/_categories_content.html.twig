@@ -1,0 +1,44 @@
+<table class="js-filter-content">
+    <tbody>
+
+
+
+
+    {% for categorie in categories %}
+
+        <td>
+            <div  style="background-color: #ffff; color: black;" class="col-lg-50 col-md-30">
+                <div class="single_fact">
+                    <div class="f_icon">
+                        <img src="img/f-icons/icon1.png" alt="">
+                    </div>
+                    <h2 style="color: black">{{ categorie.nom }}</h2>
+
+
+                    <p> celles-ci sont placés au-dessus de la liste des produits sous le H1.
+                        Je me demande si déplacer cette description en dessous de la page produit va changer quelque chose pour le référencement.
+                    </p>
+
+                    <div style="background-color: #ffff; color: black;" class="search_course_wrap">
+
+                        <a href="{{ path('categorie_show', { 'id': categorie.id }) }}" class="btn search_course_btn">Show</a>
+                    </div>
+
+                    {{ categorie.rating|rating(5, "fa-2x") }}
+
+
+
+
+                </div>
+            </div>
+
+            {% if loop.index is divisible by(4)	 %}
+                <tr></tr>
+            {% endif %}
+
+        </td>
+
+    {% endfor %}
+    </tbody>
+
+</table>

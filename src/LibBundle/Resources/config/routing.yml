@@ -1,0 +1,15 @@
+lib_homepage:
+    path:     /
+    defaults: { _controller: LibBundle:Default:index }
+
+lib_livre:
+    resource: "@LibBundle/Resources/config/routing/livre.yml"
+    prefix:   /livre
+
+lib_categorie:
+    resource: "@LibBundle/Resources/config/routing/categorie.yml"
+    prefix:   /categorie
+lib_res:
+    resource: "@LibBundle/Resources/config/routing/reservation.yml"
+    prefix:   /reservation
+

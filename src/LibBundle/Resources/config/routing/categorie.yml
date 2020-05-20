@@ -1,0 +1,29 @@
+categorie_index:
+    path:     /
+    defaults: { _controller: "LibBundle:Categorie:index" }
+    methods:  GET
+
+categorie_indexback:
+    path:     /indexback
+    defaults: { _controller: "LibBundle:Categorie:indexback" }
+    methods:  GET
+
+categorie_show:
+    path:     /{id}/show
+    defaults: { _controller: "LibBundle:Categorie:show" }
+    methods:  GET
+
+categorie_new:
+    path:     /new
+    defaults: { _controller: "LibBundle:Categorie:new" }
+    methods:  [GET, POST]
+
+categorie_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "LibBundle:Categorie:edit" }
+    methods:  [GET, POST]
+
+categorie_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "LibBundle:Categorie:delete" }
+    methods:  DELETE

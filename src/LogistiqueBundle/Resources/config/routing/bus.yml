@@ -1,0 +1,30 @@
+bus_indexfrontend:
+  path:     /busfr
+  defaults: { _controller: "LogistiqueBundle:Bus:index1" }
+  methods:  GET
+
+
+bus_index:
+  path:     /
+  defaults: { _controller: "LogistiqueBundle:Bus:index" }
+  methods:  GET
+
+bus_show:
+  path:     /{id}/show
+  defaults: { _controller: "LogistiqueBundle:Bus:show" }
+  methods:  GET
+
+bus_new:
+  path:     /new
+  defaults: { _controller: "LogistiqueBundle:Bus:new" }
+  methods:  [GET, POST]
+
+bus_edit:
+  path:     /{id}/edit
+  defaults: { _controller: "LogistiqueBundle:Bus:edit" }
+  methods:  [GET, POST]
+
+bus_delete:
+  path:     /{id}/delete
+  defaults: { _controller: "LogistiqueBundle:Bus:delete" }
+  methods:  DELETE

@@ -1,0 +1,42 @@
+{% extends 'backend/indexe.html.twig' %}
+
+{% block content %}
+    {{ form_start(form) }}
+    <div class="box box-primary col-md-6">
+        <div class="box-header with-border">
+            <h3 class="box-title">Ajouter un chapitre</h3>
+        </div>
+        <!-- /.box-header -->
+        <!-- form start -->
+        <form role="form ">
+            <div class="box-body">
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Titre du chapitre</label>
+                    {{ form_widget(form.titre, {'attr' : {'class' :'form-control' }}) }}
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Matière</label>
+                    {{ form_widget(form.matiere, {'attr' : {'class' :'form-control' }}) }}
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Description</label>
+                    {{ form_widget(form.description, {'attr' : {'class' :'form-control' }}) }}
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputFile">Cours</label>
+                    {{ form_widget(form.imageFile) }}
+                </div>
+            </div>
+
+            <!-- /.box-body -->
+
+            {{ form_rest(form)}}
+            <ul>
+                <li>
+                    <a href="{{ path('chapitre_index') }}">Back to the list</a>
+                </li>
+            </ul>
+        </form>
+    </div>
+
+{% endblock %}

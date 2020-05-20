@@ -1,0 +1,24 @@
+abonnement_index:
+  path:     /
+  defaults: { _controller: "LogistiqueBundle:abonnement:index" }
+  methods:  GET
+
+abonnement_show:
+  path:     /{id}/show
+  defaults: { _controller: "LogistiqueBundle:abonnement:show" }
+  methods:  GET
+
+abonnement_new:
+  path:     /new
+  defaults: { _controller: "LogistiqueBundle:abonnement:new" }
+  methods:  [GET, POST]
+
+abonnement_edit:
+  path:     /{id}/edit
+  defaults: { _controller: "LogistiqueBundle:abonnement:edit" }
+  methods:  [GET, POST]
+
+abonnement_delete:
+  path:     /{id}/delete
+  defaults: { _controller: "LogistiqueBundle:abonnement:delete" }
+  methods:  DELETE

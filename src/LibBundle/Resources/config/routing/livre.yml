@@ -1,0 +1,34 @@
+livre_index:
+    path:     /
+    defaults: { _controller: "LibBundle:Livre:index" }
+    methods:  GET
+
+livre_show:
+    path:     /{id}/show
+    defaults: { _controller: "LibBundle:Livre:show" }
+    methods:  [GET, POST]
+
+livre_res:
+    path:     /{id}/res
+    defaults: { _controller: "LibBundle:Livre:reserver" }
+    methods:  [GET, POST]
+
+livre_jm:
+    path:     /{id}/jm
+    defaults: { _controller: "LibBundle:Livre:incnbj" }
+    methods:  [GET, POST]
+
+livre_new:
+    path:     /new
+    defaults: { _controller: "LibBundle:Livre:new" }
+    methods:  [GET, POST]
+
+livre_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "LibBundle:Livre:edit" }
+    methods:  [GET, POST]
+
+livre_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "LibBundle:Livre:delete" }
+    methods:  DELETE

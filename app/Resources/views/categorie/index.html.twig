@@ -1,0 +1,36 @@
+{% extends 'frontend/base.html.twig' %}
+{% block login %}
+{% endblock %}
+{% block content %}
+    <section class="home_banner_area">
+        <div class="banner_inner">
+            <div class="container">
+                <div class="row">
+
+                    <div class="banner_content js-filter ">
+                        <h1>Categories list</h1>
+
+                        <div style="background-color: #ffff; color: black;" class="search_course_wrap">
+                            <form  class=" js-filter-form form_box d-flex justify-content-between w-100">
+                                <input style=" color: black;" type="text" placeholder="Search Courses" class="form-control" name="filter" onfocus="this.placeholder = ''"
+                                       onblur="this.placeholder = 'Search'">
+                                <button type="submit" class="btn search_course_btn">Search</button>
+                            </form>
+                        </div>
+
+                            {% include 'categorie/_categories_content.html.twig' %}
+
+
+                        <div   class="search_course_wrap">
+
+                            <a href="{{ path('categorie_new') }}" class="btn search_course_btn">Create</a>
+                        </div>
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

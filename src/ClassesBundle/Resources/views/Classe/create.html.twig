@@ -1,0 +1,8 @@
+{#Changer "admin" par "back" pour changer de template#}
+{% extends 'back.html.twig' %}
+   {% block content %}
+{{ form_start(form) }}
+<div hidden="hidden">{{ form_widget(form.nbrEtudiants) }}</div>
+
+{{ form_end(form) }}
+{% endblock %}

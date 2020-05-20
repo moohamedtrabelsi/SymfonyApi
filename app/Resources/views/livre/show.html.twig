@@ -1,0 +1,121 @@
+{% extends 'frontend/base.html.twig' %}
+
+{% block login %}
+{% endblock %}
+{% block content %}
+
+
+    <section class="banner_area">
+        <div class="banner_inner d-flex align-items-center">
+            <div class="overlay"></div>
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-6">
+                        <div class="banner_content text-center">
+                            <h2>{{ livre.titre }}</h2>
+                            <p>In the history of modern astronomy, there is probably no one greater leap forward than
+                                the
+                                building and launch of the space telescope known as the Hubble.</p>
+                            <div class="page_link">
+                                <a href="index.html">Home</a>
+
+                                <a href="{{ path('livre_index') }}" >livres</a>
+                                <a href="{{ path('livre_show', { 'id': livre.id }) }}" >{{ livre.titre }}</a>
+
+                            </div>
+                            <td>
+                                <div class="col-lg-50 col-md-30">
+                                    <div class="single_fact">
+                                        <div class="f_icon">
+                                            <img src="img/f-icons/icon1.png" alt="">
+                                        </div>
+                                        <h4>{{ livre.titre }}</h4>
+
+                                        <p> celles-ci sont placés au-dessus de la liste des produits sous le H1. Je me demande si déplacer cette description en dessous de la page produit va changer quelque chose pour le référencement.
+                                        </p>
+                                        <a href="{{ path('livre_res', { 'id': livre.id }) }}" class="btn btn-primary">Reserver</a>
+                                        <div class="like-content">
+                                            {{ livre.rating|rating(5, "fa-2x") }}
+
+
+                                            <a href="{{ path('livre_jm', { 'id': livre.id }) }}" ><button
+                                                        class="btn-secondary like-review">
+                                                    <i class="fa fa-heart" aria-hidden="true"></i> Like
+                                                </button></a>
+                                        </div>
+
+                <style>
+                    .like-content {
+                        display: inline-block;
+                        width: 100%;
+                        margin: 40px 0 0;
+                        padding: 40px 0 0;
+                        font-size: 18px;
+                        border-top: 10px dashed #eee;
+                        text-align: center;
+                    }
+                    .like-content span {
+                        color: #9d9da4;
+                        font-family: monospace;
+                    }
+                    .like-content .btn-secondary {
+                        display: block;
+                        margin: 40px auto 0px;
+                        text-align: center;
+                        background: #ed2553;
+                        border-radius: 3px;
+                        box-shadow: 0 10px 20px -8px rgb(240, 75, 113);
+                        padding: 10px 17px;
+                        font-size: 18px;
+                        cursor: pointer;
+                        border: none;
+                        outline: none;
+                        color: #ffffff;
+                        text-decoration: none;
+                        -webkit-transition: 0.3s ease;
+                        transition: 0.3s ease;
+                    }
+                    .like-content .btn-secondary:hover {
+                        transform: translateY(-3px);
+                    }
+                    .like-content .btn-secondary .fa {
+                        margin-right: 5px;
+                    }
+                    .animate-like {
+                        animation-name: likeAnimation;
+                        animation-iteration-count: 1;
+                        animation-fill-mode: forwards;
+                        animation-duration: 0.65s;
+                    }
+                    @keyframes likeAnimation {
+                        0%   { transform: scale(30); }
+                        100% { transform: scale(1); }
+                    }
+                </style>
+                                            <script>
+                                                $(function(){
+                                                    $(document).one('click', '.like-review', function(e) {
+                                                        $(this).html('<i class="fa fa-heart" aria-hidden="true"></i> You liked this');
+                                                        $(this).children('.fa-heart').addClass('animate-like');
+                                                    });
+                                                });
+                                            </script>
+                                        </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </td>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+{% endblock %}

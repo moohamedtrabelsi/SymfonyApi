@@ -1,0 +1,10 @@
+test_homepage:
+    path:     /
+    defaults: { _controller: TestBundle:Default:index }
+
+affiche:
+    path:     /affiche
+    defaults: { _controller: TestBundle:Default:affiche }
+test_frontend:
+    path:     /home
+    defaults: { _controller: TestBundle:Default:index1 }

@@ -1,0 +1,42 @@
+{% extends 'backend/index.html.twig' %}
+{% block login %}
+{% endblock %}
+{% block content %}
+    {{ form_start(form) }}
+    <div class="box box-primary col-md-6">
+        <div class="box-header with-border">
+            <h3 class="box-title">Ajouter un module</h3>
+        </div>
+        <!-- /.box-header -->
+        <!-- form start -->
+        <form role="form ">
+            <div class="box-body">
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Titre du module</label>
+                    {{ form_widget(form.nom, {'attr' : {'class' :'form-control' }}) }}
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Description</label>
+                    {{ form_widget(form.description, {'attr' : {'class' :'form-control' }}) }}
+                </div>
+
+                {{ form_start(form) }}
+                {{ form_widget(form) }}
+                <input type="submit" value="Create" />
+                {{ form_end(form) }}
+
+                <ul>
+                    <li>
+                        <a href="{{ path('module_index') }}">Back to the list</a>
+                    </li>
+                </ul>
+
+            </div>
+            <!-- /.box-body -->
+
+            {{ form_rest(form)}}
+        </form>
+    </div>
+
+{% endblock %}
+

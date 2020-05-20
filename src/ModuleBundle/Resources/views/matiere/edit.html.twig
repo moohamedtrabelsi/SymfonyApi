@@ -1,0 +1,16 @@
+{% extends 'backend/indexe.html.twig' %}
+{% block content %}
+    <h1>Matiere edit</h1>
+
+    {{ form_start(edit_form) }}
+        {{ form_widget(edit_form) }}
+        <input type="submit" value="Edit" onclick="return alert('Les entrées dans cette matière ont été modifiées avec succes')" />
+    {{ form_end(edit_form) }}
+
+    <ul>
+        <li>
+            <a href="{{ path('matiere_index') }}">Back to the list</a>
+        </li>
+
+    </ul>
+{% endblock %}

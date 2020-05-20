@@ -1,0 +1,309 @@
+{% extends 'frontend/base.html.twig' %}
+{% block login %}
+{% endblock %}
+{% block content %}
+    <h1>Reservation</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ reservation.dd | date }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+
+    <div class="container-compteur center">
+        <section class="jours">
+            <div class="donut-chart">
+                <div id="portion-back-1" class="trim"><div class="embed"></div></div>
+                <div id="portion-back-2" class="trim"><div class="embed"></div></div>
+                <div id="portion1" class="trim"><div class="embed"></div></div>
+                <div id="portion2" class="trim"><div class="embed"></div></div>
+                <p class="center-time" id="time">00</p>
+            </div>
+            <p class="center-unit">JOURS</p>
+        </section>
+        <section class="heures">
+            <div class="donut-chart">
+                <div id="portion-back-1" class="trim"><div class="embed"></div></div>
+                <div id="portion-back-2" class="trim"><div class="embed"></div></div>
+                <div id="portion1" class="trim"><div class="embed"></div></div>
+                <div id="portion2" class="trim"><div class="embed"></div></div>
+                <p class="center-time" id="time">00</p>
+            </div>
+            <p class="center-unit">HEURES</p>
+        </section>
+        <section class="minutes">
+            <div class="donut-chart">
+                <div id="portion-back-1" class="trim"><div class="embed"></div></div>
+                <div id="portion-back-2" class="trim"><div class="embed"></div></div>
+                <div id="portion1" class="trim"><div class="embed"></div></div>
+                <div id="portion2" class="trim"><div class="embed"></div></div>
+                <p class="center-time" id="time">00</p>
+            </div>
+            <p class="center-unit">MINUTES</p>
+        </section>
+        <section class="secondes">
+            <div class="donut-chart">
+                <div id="portion-back-1" class="trim"><div class="embed"></div></div>
+                <div id="portion-back-2" class="trim"><div class="embed"></div></div>
+                <div id="portion1" class="trim"><div class="embed"></div></div>
+                <div id="portion2" class="trim"><div class="embed"></div></div>
+                <p class="center-time" id="time">00</p>
+            </div>
+            <p class="center-unit">SECONDES</p>
+        </section>
+    </div><div class="container-compteur center">
+    <section class="jours">
+        <div class="donut-chart">
+            <div id="portion-back-1" class="trim"><div class="embed"></div></div>
+            <div id="portion-back-2" class="trim"><div class="embed"></div></div>
+            <div id="portion1" class="trim"><div class="embed"></div></div>
+            <div id="portion2" class="trim"><div class="embed"></div></div>
+            <p class="center-time" id="time">00</p>
+        </div>
+        <p class="center-unit">JOURS</p>
+    </section>
+    <section class="heures">
+        <div class="donut-chart">
+            <div id="portion-back-1" class="trim"><div class="embed"></div></div>
+            <div id="portion-back-2" class="trim"><div class="embed"></div></div>
+            <div id="portion1" class="trim"><div class="embed"></div></div>
+            <div id="portion2" class="trim"><div class="embed"></div></div>
+            <p class="center-time" id="time">00</p>
+        </div>
+        <p class="center-unit">HEURES</p>
+    </section>
+    <section class="minutes">
+        <div class="donut-chart">
+            <div id="portion-back-1" class="trim"><div class="embed"></div></div>
+            <div id="portion-back-2" class="trim"><div class="embed"></div></div>
+            <div id="portion1" class="trim"><div class="embed"></div></div>
+            <div id="portion2" class="trim"><div class="embed"></div></div>
+            <p class="center-time" id="time">00</p>
+        </div>
+        <p class="center-unit">MINUTES</p>
+    </section>
+    <section class="secondes">
+        <div class="donut-chart">
+            <div id="portion-back-1" class="trim"><div class="embed"></div></div>
+            <div id="portion-back-2" class="trim"><div class="embed"></div></div>
+            <div id="portion1" class="trim"><div class="embed"></div></div>
+            <div id="portion2" class="trim"><div class="embed"></div></div>
+            <p class="center-time" id="time">00</p>
+        </div>
+        <p class="center-unit">SECONDES</p>
+    </section>
+</div>
+    <style>
+        * {
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+        body{
+            background: #010006;
+        }
+        .center{
+            position: absolute !important;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto !important;
+        }
+
+        .container-compteur{
+            width: 90%;
+            text-align: center;
+            height: 110px;
+        }
+
+        section,
+        .donut-chart {
+            position: relative;
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 2rem;
+            border-radius: 100%;
+        }
+        .jours, .heures, .minutes, .secondes{
+            display: inline-block;
+        }
+        section{
+            width: 120px;
+        }
+        p.center-time {
+            position: absolute;
+            text-align: center;
+            font-size: 28px;
+            top:0;left:0;bottom:0;right:0;
+            width: 40px;
+            height: 40px;
+            margin: auto;
+            border-radius: 50%;
+            line-height: 40px;
+            color: #fff;
+        }
+        p.center-unit {
+            position: absolute;
+            text-align: center;
+            font-size: 16px;
+            top:0;left:0;bottom:-110px;right:0;
+            width: 110px;
+            height: 40px;
+            margin: auto;
+            border-radius: 50%;
+            line-height: 40px;
+            color: #fff;
+        }
+        .trim {
+            border-radius: 50%;
+            clip: rect(0px, 80px, 80px, 40px);
+            height: 100%;
+            position: absolute;
+            width: 100%;
+            transform: rotate(0deg);
+            transition: all .3s;
+        }
+        .embed {
+            border-radius: 50%;
+            clip: rect(0px, 40px, 80px, 0px);
+            height: 100%;
+            position: absolute;
+            width: 100%;
+            font-family: monospace;
+            font-size: 1.5rem;
+            transition: all .3s;
+        }
+        #portion-back-1 {
+            transform: rotate(0deg);
+        }
+        #portion-back-1 .embed {
+            border: 5px solid #404040;
+        //opacity: .3;
+            transform: rotate(180deg);
+        }
+        #portion-back-2 {
+            transform: rotate(180deg);
+        }
+        #portion-back-2 .embed {
+            border: 5px solid #404040;
+        //opacity: .3;
+            transform: rotate(180deg);
+        }
+
+
+
+
+
+        #portion1 {
+            transform: rotate(0deg);
+        }
+        #portion1 .embed {
+            border: 5px solid #01a6a0;
+            transform: rotate(0deg);
+        }
+        #portion2 {
+            transform: rotate(0deg);
+        }
+        #portion2 .embed {
+            border: 5px solid #01a6a0;
+            transform: rotate(0deg);
+        }
+    </style> var date_actuelle = "{{ reservation.dd | date }}";
+    var date_evenement = " {{ reservation.df | date }}";
+<script>
+    jQuery(document).ready(function compte_a_rebours()
+    {
+        var compte_a_rebours = document.getElementById("p");
+
+        var date_actuelle =new Date();
+        var date_evenement = new Date(" {{ reservation.df | date }}");
+        var date_lancement =new Date("{{ reservation.dd | date }}");
+
+        var total_secondes = (date_evenement - date_actuelle) / 1000;
+
+
+
+
+        $(document).ready(function diffdate(d1,d2,u){
+            div=1
+            switch(u){
+                case 's': div=1000;
+                    break;
+                case 'm': div=1000*60
+                    break;
+                case 'h': div=1000*60*60
+                    break;
+                case 'd': div=1000*60*60*24
+                    break;
+            }
+
+            var Diff = d2.getTime() - d1.getTime();
+            return Math.ceil((Diff/div))
+        });
+        var total_jours = diffdate(date_lancement,date_evenement,'d');
+
+
+
+
+        var prefixe = "";
+        if (total_secondes < 0)
+        {
+            //cas ou il est fini et on affiche depuis combien de temps il est fini
+        }
+        if (total_secondes > 0)
+        {
+            var jours = Math.floor(total_secondes / (60 * 60 * 24));
+            var heures = Math.floor((total_secondes - (jours * 60 * 60 * 24)) / (60 * 60));
+            minutes = Math.floor((total_secondes - ((jours * 60 * 60 * 24 + heures * 60 * 60))) / 60);
+            secondes = Math.floor(total_secondes - ((jours * 60 * 60 * 24 + heures * 60 * 60 + minutes * 60)));
+
+            function timeInDeg(_elem, _class) {
+                var deg = (360/60)*(60-_elem);
+                if(_class == "heures") {deg = (360/24)*(24-_elem);}
+                if(_class == "jours") {deg = (360/total_jours)*(total_jours-_elem);}
+                if(deg<180) {
+                    jQuery("."+_class+" #portion2").css("transform", "rotate("+0+"deg)");
+                    jQuery("."+_class+" #portion1 .embed").css("transform", "rotate("+deg+"deg)");
+                    jQuery("."+_class+" #portion2 .embed").css("transform", "rotate("+deg+"deg)");
+                }else{
+                    jQuery("."+_class+" #portion1 .embed").css("transform", "rotate(180deg)");
+                    jQuery("."+_class+" #portion2 .embed").css("transform", "rotate(180deg)");
+                    deg = deg-180;
+                    if(deg >= 180 ) deg = 178
+                    jQuery("."+_class+" #portion2").css("transform", "rotate("+deg+"deg)");
+                }
+                jQuery("."+_class+" #time").html(_elem);
+            }
+            timeInDeg(secondes, "secondes");
+            timeInDeg(minutes, "minutes");
+            timeInDeg(heures, "heures");
+            timeInDeg(jours, "jours");
+
+        }
+        else
+        {
+            //Compte à rebours terminé
+
+        }
+        var actualisation = setTimeout("compte_a_rebours();", 1000);
+    });
+    compte_a_rebours();
+
+</script>
+
+
+    <ul>
+        <li>
+            <a href="{{ path('reservation_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('reservation_edit', { 'id': reservation.id }) }}">Edit</a>
+        </li>
+
+    </ul>
+{% endblock %}

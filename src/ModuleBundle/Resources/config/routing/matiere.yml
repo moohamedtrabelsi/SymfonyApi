@@ -1,0 +1,44 @@
+matiere_index:
+    path:     /
+    defaults: { _controller: "ModuleBundle:matiere:index" }
+    methods:  GET
+
+matiere_show:
+    path:     /{id}/show
+    defaults: { _controller: "ModuleBundle:matiere:show" }
+    methods:  GET
+
+
+matiere_chap:
+    path:     /{id}/chap
+    defaults: { _controller: "ModuleBundle:chapitre:chapmat" }
+    methods:  GET
+
+
+matiere_new:
+    path:     /new
+    defaults: { _controller: "ModuleBundle:matiere:new" }
+    methods:  [GET, POST]
+
+matiere_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "ModuleBundle:matiere:edit" }
+    methods:  [GET, POST]
+
+matiere_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "ModuleBundle:matiere:delete" }
+    methods:  DELETE
+
+matiere_index1:
+    path:     /liste
+    defaults: { _controller: "ModuleBundle:matiere:index1" }
+    methods:  GET
+
+matiere_indexEtudiant:
+    path: /Etudiant
+    controller: "ModuleBundle:matiere:indexEtudiant"
+
+matiere_recherche:
+    path:     /recherchebyname
+    defaults: { _controller: "ModuleBundle:matiere:rechercheByName" }

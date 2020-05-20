@@ -1,0 +1,11 @@
+json_homepage:
+    path:     /
+    defaults: { _controller: JsonBundle:Default:index }
+
+cat_affiche:
+    path:     /cat/affiche
+    defaults: { _controller: JsonBundle:Categorie:indexback }
+livre_index:
+    path:     /liv/{cat}
+    defaults: { _controller: "LibBundle:Livre:index" }
+    methods:  GET

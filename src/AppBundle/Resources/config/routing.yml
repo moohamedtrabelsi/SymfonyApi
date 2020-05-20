@@ -1,0 +1,7 @@
+read_etudiants:
+  path:     /readEtudiants
+  defaults: { _controller: AppBundle:User:readEtudiants }
+
+affecter_etudiants:
+  path:     /affecterEtudiant/{id}
+  defaults: { _controller: AppBundle:User:AffecterEtudiant }

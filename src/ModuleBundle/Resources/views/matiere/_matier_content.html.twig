@@ -1,0 +1,24 @@
+<tbody class="js-filter-content">
+{% for matiere in matieres %}
+    <tr>
+        <td><a href="{{ path('matiere_show', { 'id': matiere.id }) }}">{{ matiere.id }}</a></td>
+        <td>{{ matiere.nom }}</td>
+        <td>{{ matiere.coefficient }}</td>
+        <td>{{ matiere.description }}</td>
+        <td>
+            <ul>
+                <li>
+                    <a href="{{ path('matiere_chap', { 'id': matiere.id }) }}">Afficher</a>
+                </li>
+                <li>
+                    <a href="{{ path('matiere_edit', { 'id': matiere.id }) }}">Modifier</a>
+                </li>
+            </ul>
+        </td>
+
+
+    </tr>
+{% endfor %}
+
+
+</tbody>

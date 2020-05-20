@@ -1,0 +1,60 @@
+{% extends 'backend/indexb.html.twig' %}
+{% block login %}
+{% endblock %}
+{% block content %}
+    <section class="home_banner_area">
+        <div class="banner_inner">
+            <div class="container">
+                <div class="row">
+
+                    <div class="banner_content">
+                        <h1>Categories list</h1>
+
+
+
+
+                        <table>
+                            <tbody>
+
+                            {% for categorie in categories %}
+
+                                <td>
+                                    <div class="col-lg-50 col-md-30">
+                                        <div class="single_fact">
+                                            <div class="f_icon">
+                                                <img src="img/f-icons/icon1.png" alt="">
+                                            </div>
+                                            <h4>{{ categorie.nom }}</h4>
+                                            <a href="{{ path('categorie_show', { 'id': categorie.id }) }}" class="btn btn-primary">Show</a>
+                                            <p> celles-ci sont placés au-dessus de la liste des produits sous le H1. Je me demande si déplacer cette description en dessous de la page produit va changer quelque chose pour le référencement.
+                                            </p>
+                                            {{ categorie.rating|rating(5, "fa-2x") }}
+
+
+
+
+                                        </div>
+                                    </div>
+
+                                    {% if loop.index is divisible by(4)	 %}
+                                        <tr></tr>
+                                    {% endif %}
+
+                                </td>
+
+                            {% endfor %}
+                            </tbody>
+
+                        </table>
+                        <ul>
+                            <li>
+                                <a href="{{ path('categorie_new') }}">Create a new categorie</a>
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

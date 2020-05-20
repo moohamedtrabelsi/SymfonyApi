@@ -1,0 +1,35 @@
+{% extends 'backend/index.html.twig' %}
+
+{% block content %}
+    <h1>Abonnements list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nom</th>
+                <th>Prenom</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for abonnement in abonnements %}
+            <tr>
+                <td><a href="{{ path('abonnement_show', { 'id': abonnement.id }) }}">{{ abonnement.id }}</a></td>
+                <td>{{ abonnement.nom }}</td>
+                <td>{{ abonnement.prenom }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('abonnement_show', { 'id': abonnement.id }) }}">show</a>
+                        </li>
+
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+
+{% endblock %}

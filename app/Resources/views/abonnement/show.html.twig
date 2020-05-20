@@ -1,0 +1,36 @@
+{% extends 'backend/index.html.twig' %}
+
+{% block content %}
+    <h1>Abonnement</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ abonnement.id }}</td>
+            </tr>
+            <tr>
+                <th>Nom</th>
+                <td>{{ abonnement.nom }}</td>
+            </tr>
+            <tr>
+                <th>Prenom</th>
+                <td>{{ abonnement.prenom }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('abonnement_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('abonnement_edit', { 'id': abonnement.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}

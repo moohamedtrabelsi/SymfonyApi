@@ -1,0 +1,23 @@
+{% extends 'backend/Module/index.html.twig' %}
+
+{% block content %}
+    {{ form_start(edit_form) }}
+    <div class="box box-primary col-md-6">
+        <div class="box-header with-border">
+            <h3 class="box-title">Modifier les entrées de ce module</h3>
+        </div>
+        <!-- /.box-header -->
+        <!-- form start -->
+        {{ form_start(edit_form) }}
+        {{ form_widget(edit_form) }}
+        <input type="submit" value="Edit" onclick="return alert('Des modificatios ont été établies avec succés')" />
+        {{ form_end(edit_form) }}
+        <ul>
+            <li>
+                <a href="{{ path('module_index') }}">Back to the list</a>
+            </li>
+
+        </ul>
+    </div>
+
+{% endblock %}

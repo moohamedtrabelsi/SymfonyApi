@@ -1,0 +1,79 @@
+{% extends 'backend/indexe.html.twig' %}
+{% block content %}
+    <div class="box">
+        <div class="box-header">
+            <h3 class="box-title">Liste des matières</h3>
+        </div>
+        <!-- /.box-header -->
+        <div class="box-body">
+            <table id="example1" class="table table-bordered table-striped">
+                <thead>
+                <tr>
+                    <th>ID matière</th>
+                    <th>Nom de matière</th>
+                    <th>Coefficient</th>
+                    <th>Description</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>{{ matiere.id }}</td>
+                    <td>{{ matiere.nom }}</td>
+                    <td>{{ matiere.coefficient }}</td>
+                    <td>{{ matiere.description }}</td>
+                </tr>
+
+                </tbody>
+            </table>
+
+
+
+
+
+            <table>
+                <tbody>
+
+                {% for chapitre in chapitres %}
+
+                    <td>
+                        <div class="col-lg-50 col-md-30">
+                            <div class="single_fact">
+                                <div class="f_icon">
+                                    <img src="img/f-icons/icon1.png" alt="">
+                                </div>
+                                <h4>{{ chapitre.titre }}</h4>
+                                <a href="{{ path('chapitre_show', { 'id': chapitre.id }) }}" class="btn btn-primary">Show</a>
+                                </p>
+
+                            </div>
+                        </div>
+
+                        {% if loop.index is divisible by(4)	 %}
+                            <tr></tr>
+                        {% endif %}
+
+                    </td>
+
+                {% endfor %}
+                </tbody>
+
+            </table>
+
+
+
+            <li>
+                <a href="{{ path('matiere_index') }}">Back to the list</a>
+            </li>
+        </div>
+        <!-- /.box-body -->
+    </div>
+    <!-- /.box -->
+    </div>
+    <!-- /.col -->
+    </div>
+    <!-- /.row -->
+    </section>
+    <!-- /.content -->
+    </div>
+
+{% endblock %}

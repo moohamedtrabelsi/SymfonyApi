@@ -1,0 +1,54 @@
+{% extends 'backend/index.html.twig' %}
+
+{% block content %}
+    <h1 style="text-align: center">Ligne</h1>
+
+
+    <table>
+        <tbody>
+            <tr>
+
+                <th>Id</th>
+                <td>{{ ligne.id }}</td>
+            </tr>
+
+                <th>Reference ligne &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+                <td>{{ ligne.id }}</td>
+            </tr>
+            <br>
+            <br>
+
+            <tr>
+                <th>Depart</th>
+                <td>{{ ligne.depart }}</td>
+            </tr>
+
+            <br>
+            <br>
+
+            <tr>
+                <th>Arrivee</th>
+                <td>{{ ligne.arrivee }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+
+
+
+
+
+        <a type="button" class="btn btn-default pull-right" href="{{ path('ligne_index') }}">Back to the list</a>
+        <div>
+
+            <a type="button" class="btn btn-default pull-right" href="{{ path('ligne_edit', { 'id': ligne.id }) }}">edit</a>
+
+        </div>
+
+            {{ form_start(delete_form) }}
+                <input style="color: red" type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+
+
+
+{% endblock %}

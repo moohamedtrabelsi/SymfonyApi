@@ -1,0 +1,29 @@
+chapitre_index:
+    path:     /
+    defaults: { _controller: "ModuleBundle:chapitre:index" }
+    methods:  GET
+
+chapitre_show:
+    path:     /{id}/show
+    defaults: { _controller: "ModuleBundle:chapitre:show" }
+    methods:  GET
+
+chapitre_new:
+    path:     /new
+    defaults: { _controller: "ModuleBundle:chapitre:new" }
+    methods:  [GET, POST]
+
+chapitre_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "ModuleBundle:chapitre:edit" }
+    methods:  [GET, POST]
+
+chapitre_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "ModuleBundle:chapitre:delete" }
+    methods:  DELETE
+
+chapitre_indexEtud:
+    path: /Etud
+    controller: "ModuleBundle:chapitre:indexEtud"
+

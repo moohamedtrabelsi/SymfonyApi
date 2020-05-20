@@ -1,0 +1,14 @@
+{% extends 'back.html.twig' %}
+   {% block content %}
+<center><h1>Affection de {{ etudiant.nom }} {{ etudiant.prenom }}</h1></center>
+
+{{ form_start(form) }}
+
+<select name="classe">
+    {% for i in table %}
+        <option value="{{ i.id }}">{{ i.nom }}</option>
+    {% endfor %}
+</select>
+<input type="submit" value="Enregistrer">
+{{ form_end(form) }}
+{% endblock %}

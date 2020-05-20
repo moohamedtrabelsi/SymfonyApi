@@ -1,0 +1,24 @@
+foyer_index:
+    path:     /
+    defaults: { _controller: "LogistiqueBundle:Foyer:index" }
+    methods:  GET
+
+foyer_show:
+    path:     /{id}/show
+    defaults: { _controller: "LogistiqueBundle:Foyer:show" }
+    methods:  GET
+
+foyer_new:
+    path:     /new
+    defaults: { _controller: "LogistiqueBundle:Foyer:new" }
+    methods:  [GET, POST]
+
+foyer_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "LogistiqueBundle:Foyer:edit" }
+    methods:  [GET, POST]
+
+foyer_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "LogistiqueBundle:Foyer:delete" }
+    methods:  DELETE

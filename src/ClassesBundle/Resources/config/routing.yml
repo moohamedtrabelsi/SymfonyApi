@@ -1,0 +1,45 @@
+classes_homepage:
+    path:     /
+    defaults: { _controller: ClassesBundle:Default:index }
+
+branche_read:
+    path:     /readBranche
+    defaults: { _controller: ClassesBundle:Branche:read }
+
+
+branche_create:
+    path:     /createBranche
+    defaults: { _controller: ClassesBundle:Branche:create }
+
+branche_delete:
+    path:     /deleteBranche/{id}
+    defaults: { _controller: ClassesBundle:Branche:delete }
+
+branche_update:
+    path:     /updateBranche/{id}
+    defaults: { _controller: ClassesBundle:Branche:update }
+
+classe_create:
+    path:     /createClasse
+    defaults: { _controller: ClassesBundle:Classe:create }
+
+classe_read:
+    path:     /readClasse
+    defaults: { _controller: ClassesBundle:Classe:read }
+
+
+classe_delete:
+    path:     /deleteClasse/{id}
+    defaults: { _controller: ClassesBundle:Classe:delete }
+
+classe_update:
+    path:     /updateClasse/{id}
+    defaults: { _controller: ClassesBundle:Classe:update }
+
+classe_etudiants:
+    path:     /classeEtudiants/{id}
+    defaults: { _controller: ClassesBundle:Classe:Etudiants }
+
+classe_recherche:
+    path:     /recherche
+    defaults: { _controller: ClassesBundle:Classe:Recherche }

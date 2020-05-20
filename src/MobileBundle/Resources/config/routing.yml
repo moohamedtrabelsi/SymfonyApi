@@ -1,0 +1,19 @@
+mobile_homepage:
+    path:     /
+    defaults: { _controller: MobileBundle:Default:index }
+
+categories:
+    path:     /allcat
+    defaults: { _controller: MobileBundle:Categories:index }
+newcategorie:
+    path:     /newcat
+    defaults: { _controller: MobileBundle:Categories:new }
+livres:
+    path:     /allliv
+    defaults: { _controller: MobileBundle:Livres:index }
+livbycat:
+    path:     /{cat}/livres
+    defaults: { _controller: MobileBundle:Livres:livreparcat }
+newlivre:
+    path:     /newliv
+    defaults: { _controller: MobileBundle:Livres:new }

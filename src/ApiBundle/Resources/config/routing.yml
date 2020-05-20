@@ -1,0 +1,8 @@
+lib_categorie:
+    resource: "@LibBundle/Resources/config/routing/categorie.yml"
+    prefix:   /categoriee
+
+categories:
+    path:     /a
+    defaults: { _controller: ApiBundle:Categories:index }
+

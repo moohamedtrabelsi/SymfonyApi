@@ -1,0 +1,40 @@
+{% extends 'backend/index.html.twig' %}
+
+{% block content %}
+    <h1>Foyer</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ foyer.id }}</td>
+            </tr>
+            <tr>
+                <th>Nom</th>
+                <td>{{ foyer.nom }}</td>
+            </tr>
+            <tr>
+                <th>Lieu</th>
+                <td>{{ foyer.lieu }}</td>
+            </tr>
+            <tr>
+                <th>Nbrchambre</th>
+                <td>{{ foyer.nbrChambre }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('foyer_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('foyer_edit', { 'id': foyer.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}

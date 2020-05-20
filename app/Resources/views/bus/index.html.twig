@@ -1,0 +1,48 @@
+{% extends 'backend/index.html.twig' %}
+
+{% block content %}
+    <h1>Buses list</h1>
+<div class="box-body">
+    <table id="example2" class="table table-bordered table-hover">
+        <thead>
+        <tr>
+
+
+
+                <th>Reference bus</th>
+                <th>Nombre des places</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for bus in buses %}
+            <tr>
+                <td><a href="{{ path('bus_show', { 'id': bus.id }) }}">{{ bus.id }}</a></td>
+                <td>{{ bus.nbrPlace }}</td>
+                <td>
+
+
+                    <div>
+                            <a type="button" class="btn btn-default pull-right" href="{{ path('bus_show', { 'id': bus.id }) }}">show</a>
+                    </div>
+
+                            <div>
+                            <a type="button" class="btn btn-default pull-right" href="{{ path('bus_edit', { 'id': bus.id }) }}">edit</a>
+                            </div>
+
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+
+</div>
+
+            <div>
+                <a type="button"  href="{{ path('bus_new') }}"class="btn btn-default pull-right"><i class="fa fa-plus"></i> Create new bus</a>
+            </div>
+    <div class="navigation">
+        {{ knp_pagination_render(buses) }}
+    </div>
+{% endblock %}

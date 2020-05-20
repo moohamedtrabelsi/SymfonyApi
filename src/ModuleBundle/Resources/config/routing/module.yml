@@ -1,0 +1,33 @@
+module_index:
+    path:     /
+    defaults: { _controller: "ModuleBundle:module:index" }
+    methods:  GET
+
+module_show:
+    path:     /{id}/show
+    defaults: { _controller: "ModuleBundle:module:show" }
+    methods:  GET
+
+module_new:
+    path:     /new
+    defaults: { _controller: "ModuleBundle:module:new" }
+    methods:  [GET, POST]
+
+module_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "ModuleBundle:module:edit" }
+    methods:  [GET, POST]
+
+module_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "ModuleBundle:module:delete" }
+    methods:  DELETE
+
+module_indexEnseignant:
+    path: /Enseignant
+    controller: "ModuleBundle:module:indexEnseignant"
+
+module_mat:
+    path:     /{id}/mat
+    defaults: { _controller: "ModuleBundle:matiere:matmod" }
+    methods:  GET

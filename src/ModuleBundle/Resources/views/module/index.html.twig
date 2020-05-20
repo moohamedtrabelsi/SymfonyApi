@@ -1,0 +1,55 @@
+{% extends 'backend/index.html.twig' %}
+{% block login %}
+{% endblock %}
+{% block content %}
+    <div class="box">
+        <div class="box-header">
+            <h3 class="box-title">Liste des modules</h3>
+        </div>
+        <!-- /.box-header -->
+        <div class="box-body">
+            <table id="example1" class="table table-bordered table-striped">
+                <thead>
+                <tr>
+                    <th>ID module</th>
+                    <th>Nom du module</th>
+                    <th>Description</th>
+                    <th>Action</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for module in modules %}
+                    <tr>
+                        <td><a href="{{ path('module_show', { 'id': module.id }) }}">{{ module.id }}</a></td>
+                        <td>{{ module.nom }}</td>
+                        <td>{{ module.description }}</td>
+                        <td>
+                            <ul>
+                                <li>
+                                    <a href="{{ path('module_mat', { 'id': module.id }) }}">Afficher</a>
+                                </li>
+                                <li>
+                                    <a href="{{ path('module_edit', { 'id': module.id }) }}">Modifier</a>
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
+                {% endfor %}
+                <table>
+
+
+                    </tbody>
+
+                </table>
+        </div>
+        <!-- /.box-body -->
+    </div>
+    <!-- /.box -->
+    </div>
+    <!-- /.col -->
+    </div>
+    <!-- /.row -->
+    </section>
+    <!-- /.content -->
+    </div>
+{% endblock %}

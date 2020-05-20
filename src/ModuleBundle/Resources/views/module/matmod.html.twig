@@ -1,0 +1,53 @@
+{% extends 'backend/index.html.twig' %}
+{% block content %}
+    <div class="box">
+        <div class="box-header">
+            <h3 class="box-title">Liste des modules</h3>
+        </div>
+        <!-- /.box-header -->
+        <div class="box-body">
+            <table id="example1" class="table table-bordered table-striped">
+                <thead>
+                <tr>
+                    <th>ID module</th>
+                    <th>Nom du module</th>
+                    <th>Description</th>
+                    <th>Action</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for matiere in matieres %}
+                    <tr>
+                        <td><a href="{{ path('matiere_show', { 'id': matiere.id }) }}">{{ matiere.id }}</a></td>
+                        <td>{{ matiere.nom }}</td>
+                        <td>{{ matiere.description }}</td>
+                        <td>
+                            <ul>
+                                <li>
+                                    <a href="{{ path('matiere_show', { 'id': matiere.id }) }}">Afficher</a>
+                                </li>
+                                <li>
+                                    <a href="{{ path('matiere_edit', { 'id': matiere.id }) }}">Modifier</a>
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
+                {% endfor %}
+                <table>
+
+
+                    </tbody>
+
+                </table>
+        </div>
+        <!-- /.box-body -->
+    </div>
+    <!-- /.box -->
+    </div>
+    <!-- /.col -->
+    </div>
+    <!-- /.row -->
+    </section>
+    <!-- /.content -->
+    </div>
+{% endblock %}

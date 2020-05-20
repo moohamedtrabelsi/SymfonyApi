@@ -1,0 +1,45 @@
+{% extends 'backend/index.html.twig' %}
+
+{% block content %}
+    <h1>Lignes list</h1>
+
+<div class="box-body">
+    <table id="example2" class="table table-bordered table-hover">
+        <thead>
+        <tr>
+
+                <th>Id</th>
+                <th>Depart</th>
+                <th>Arrivee</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for ligne in lignes %}
+            <tr>
+                <td><a href="{{ path('ligne_show', { 'id': ligne.id }) }}">{{ ligne.id }}</a></td>
+                <td>{{ ligne.depart }}</td>
+                <td>{{ ligne.arrivee }}</td>
+                <td>
+
+                    <div>
+                        <a type="button" class="btn btn-default pull-right" href="{{ path('ligne_show', { 'id': ligne.id }) }}">show</a>
+                    </div>
+
+                    <div>
+                        <a type="button" class="btn btn-default pull-right" href="{{ path('ligne_edit', { 'id': ligne.id }) }}">edit</a>
+                    </div>
+
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+
+</div>
+    <div>
+        <a type="button"  href="{{ path('ligne_new') }}"class="btn btn-default pull-right"><i class="fa fa-plus"></i> Create new ligne</a>
+    </div>
+
+{% endblock %}

@@ -1,0 +1,13 @@
+module_module:
+    resource: "@ModuleBundle/Resources/config/routing/module.yml"
+    prefix:   /module
+
+module_homepage:
+    path:     /
+    defaults: { _controller: ModuleBundle:Default:index }
+module_matiere:
+    resource: "@ModuleBundle/Resources/config/routing/matiere.yml"
+    prefix:   /matiere
+module_chapitre:
+    resource: "@ModuleBundle/Resources/config/routing/chapitre.yml"
+    prefix:   /chapitre

@@ -1,0 +1,13 @@
+{% extends 'backend/index.html.twig' %}
+
+{% block content %}
+    <h1 style="text-align: center">Ligne creation</h1>
+
+    {{ form_start(form) }}
+        {{ form_widget(form) }}
+        <input type="submit"  value="Create" />
+    {{ form_end(form) }}
+
+    <a type="button" class="btn btn-default pull-right" href="{{ path('ligne_index') }}">Back to the list</a>
+
+{% endblock %}

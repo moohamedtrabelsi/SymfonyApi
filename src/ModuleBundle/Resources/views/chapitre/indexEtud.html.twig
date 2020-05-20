@@ -1,0 +1,46 @@
+{% extends 'backend/index.html.twig' %}
+
+{% block content %}
+    <div class="box">
+        <div class="box-header">
+            <h3 class="box-title">Liste des chapitres</h3>
+        </div>
+        <!-- /.box-header -->
+        <div class="box-body">
+            <table id="example1" class="table table-bordered table-striped">
+                <thead>
+                <tr>
+                    <th>ID chapitre</th>
+                    <th>Titre du chapitre</th>
+                    <th>Description</th>
+
+                </tr>
+                </thead>
+                <tbody>
+                {% for chapitre in chapitres %}
+                    <tr>
+                        <td><a href="{{ path('chapitre_indexEtud', { 'id': chapitre.id }) }}">{{ chapitre.id }}</a></td>
+                        <td>{{ chapitre.titre }}</td>
+                        <td>{{ chapitre.description }}</td>
+                    </tr>
+                {% endfor %}
+                <table>
+
+
+                    </tbody>
+
+                </table>
+        </div>
+        <!-- /.box-body -->
+    </div>
+    <!-- /.box -->
+    </div>
+    <!-- /.col -->
+    </div>
+    <!-- /.row -->
+    </section>
+    <!-- /.content -->
+    </div>
+
+
+{% endblock %}
