@@ -6,6 +6,7 @@
 package com.Ecole.Forms;
 
 import com.codename1.components.ScaleImageLabel;
+import com.codename1.ui.CheckBox;
 import com.codename1.ui.Display;
 import com.codename1.ui.FontImage;
 import com.codename1.ui.Form;
@@ -24,30 +25,7 @@ import com.codename1.ui.util.Resources;
  */
 public class test extends Form {
 Resources res = UIManager.initFirstTheme("/theme");
-    public test() {
-        addSideMenu(res);
-    }
-    
-    
-     protected void addSideMenu(Resources res) {
-        Toolbar tb = getToolbar();
-        Image img = res.getImage("f.jpg");
-        if(img.getHeight() > Display.getInstance().getDisplayHeight() / 3) {
-            img = img.scaledHeight(Display.getInstance().getDisplayHeight() / 3);
-        }
-        ScaleImageLabel sl = new ScaleImageLabel(img);
-        sl.setUIID("BottomPad");
-        sl.setBackgroundType(Style.BACKGROUND_IMAGE_SCALED_FILL);
-        
-        tb.addComponentToSideMenu(LayeredLayout.encloseIn(
-                sl,
-                FlowLayout.encloseCenterBottom(
-                        new Label(res.getImage(""), "PictureWhiteBackgrond"))
-        ));
-        
-        tb.addMaterialCommandToSideMenu("Newsfeed", FontImage.MATERIAL_UPDATE, e ->  new CategoriesForm().show());
-        tb.addMaterialCommandToSideMenu("Profile", FontImage.MATERIAL_SETTINGS, e -> new CategoriesForm().show());
-       // tb.addMaterialCommandToSideMenu("Logout", FontImage.MATERIAL_EXIT_TO_APP, e -> new WalkthruForm(res).show());
-    }
+  CheckBox cb1 = new CheckBox("CheckBox No Icon");
+
     
 }

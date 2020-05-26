@@ -68,14 +68,14 @@ public class Home extends Form{
  Container topBar = BorderLayout.east(new Label(icon));
 topBar.add(BorderLayout.SOUTH, new Label("Chef de parc...", "SidemenuTagline")); 
 topBar.setUIID("SideCommand");
-getToolbar().addComponentToSideMenu(topBar);
+/*getToolbar().addComponentToSideMenu(topBar);
 getToolbar().addMaterialCommandToSideMenu("Ajouter Aide Chauffeur", FontImage.MATERIAL_HOME, e ->{}); 
 getToolbar().addMaterialCommandToSideMenu("liste des Aide Chauffeurs", FontImage.MATERIAL_WEB, e -> new CategoriesForm().show());
 getToolbar().addMaterialCommandToSideMenu("Ajouter Chauffeur", FontImage.MATERIAL_SETTINGS, e -> new CategoriesForm().show());
 getToolbar().addMaterialCommandToSideMenu("liste des chauffeurs", FontImage.MATERIAL_INFO, e ->new CategoriesForm().show() );
 getToolbar().addMaterialCommandToSideMenu("Ajouter vehicule", FontImage.MATERIAL_SETTINGS, e -> new CategoriesForm().show());
 getToolbar().addMaterialCommandToSideMenu("liste des vehicules", FontImage.MATERIAL_INFO, e ->new CategoriesForm().show());
-
+*/
      }
         
      }    

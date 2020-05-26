@@ -4,10 +4,11 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Hamma/Documents/NetBeansProjects/PI_Mobile/src/com/Ecole/Forms/SignInForm.java</file>
-            <file>file:/C:/Users/Hamma/Documents/NetBeansProjects/PI_Mobile/src/com/Ecole/Forms/NewsfeedForm.java</file>
+            <file>file:/C:/Users/Hamma/Documents/NetBeansProjects/PI_Mobile/src/com/Ecole/Services/LivreServices.java</file>
+            <file>file:/C:/Users/Hamma/Documents/NetBeansProjects/PI_Mobile/src/com/Ecole/Forms/LivreForm.java</file>
+            <file>file:/C:/Users/Hamma/Documents/NetBeansProjects/PI_Mobile/src/com/Ecole/Services/CategorieServices.java</file>
+            <file>file:/C:/Users/Hamma/Documents/NetBeansProjects/PI_Mobile/src/com/Ecole/Forms/LivresForm.java</file>
             <file>file:/C:/Users/Hamma/Documents/NetBeansProjects/PI_Mobile/src/com/codename1/uikit/cleanmodern/CleanModern.java</file>
-            <file>file:/C:/Users/Hamma/Documents/NetBeansProjects/PI_Mobile/src/com/Ecole/Services/Authentification.java</file>
         </group>
     </open-files>
 </project-private>

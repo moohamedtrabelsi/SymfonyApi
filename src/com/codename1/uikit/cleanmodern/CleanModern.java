@@ -20,6 +20,8 @@
 package com.codename1.uikit.cleanmodern;
 
 
+import com.Ecole.Forms.CategoriesForm;
+import com.Ecole.Forms.LivreForm;
 import com.Ecole.Forms.NewsfeedForm;
 import com.Ecole.Forms.WalkthruForm;
 import com.codename1.ui.Display;
@@ -53,7 +55,7 @@ public class CleanModern {
             current.show();
             return;
         }
-        new WalkthruForm(theme).show();
+        new CategoriesForm(theme).show();
     }
 
     public void stop() {

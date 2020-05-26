@@ -76,7 +76,7 @@ public class SignInForm extends BaseForm {
                 
                 Authentification authService = new Authentification();
             authService.Login(username.getText(), password.getText());
-            new NewsfeedForm(res).show();
+            new CategoriesForm(res).show();
         });
     }
     

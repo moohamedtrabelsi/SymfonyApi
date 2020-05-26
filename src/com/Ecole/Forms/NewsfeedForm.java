@@ -62,7 +62,7 @@ public class NewsfeedForm extends BaseForm {
         sl.setBackgroundType(Style.BACKGROUND_IMAGE_SCALED_FILL);*/
         CategorieServices cs = new CategorieServices();
         
-        Container aff =new Container(BoxLayout.y());
+      /*  Container aff =new Container(BoxLayout.y());
         
          for(Categorie c : cs.getAllCats()){
              Container cat =new Container(BoxLayout.y());
@@ -194,7 +194,7 @@ public class NewsfeedForm extends BaseForm {
         addButton(res.getImage("news-item-4.jpg"), "Pellentesque non lorem diam. Proin at ex sollicia.", false, 11, 9);
    */ }
     
-    private void updateArrowPosition(Button b, Label arrow) {
+   /* private void updateArrowPosition(Button b, Label arrow) {
         arrow.getUnselectedStyle().setMargin(LEFT, b.getX() + b.getWidth() / 2 - arrow.getWidth() / 2);
         arrow.getParent().repaint();
         
@@ -279,5 +279,5 @@ public class NewsfeedForm extends BaseForm {
                 updateArrowPosition(b, arrow);
             }
         });
-    }
+    }*/
 }
